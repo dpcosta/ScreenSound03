@@ -57,42 +57,6 @@ void ExibirOpcoesDoMenu()
     {
         Console.WriteLine("Opção inválida");
     }
-
-    switch (opcaoEscolhidaNumerica)
-    {
-        case 1:
-            MenuRegistrarBanda menu1 = new();
-            menu1.Executar(bandasRegistradas);
-            ExibirOpcoesDoMenu();
-            break;
-        case 2:
-            MenuRegistrarAlbum menu2 = new();
-            menu2.Executar(bandasRegistradas);
-            ExibirOpcoesDoMenu();
-            break;
-        case 3:
-            MenuMostrarBandas menu3 = new();
-            menu3.Executar(bandasRegistradas);
-            ExibirOpcoesDoMenu();
-            break;
-        case 4:
-            MenuAvaliarBanda menu4 = new();
-            menu4.Executar(bandasRegistradas);
-            ExibirOpcoesDoMenu();
-            break;
-        case 5:
-            MenuExibirDetalhes menu5 = new MenuExibirDetalhes();
-            menu5.Executar(bandasRegistradas);
-            ExibirOpcoesDoMenu();
-            break;
-        case -1:
-            MenuSair menuSair = new();
-            menuSair.Executar(bandasRegistradas);
-            break;
-        default:
-            Console.WriteLine("Opção inválida");
-            break;
-    }
 }
 
 ExibirOpcoesDoMenu();
