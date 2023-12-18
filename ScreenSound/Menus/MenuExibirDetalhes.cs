@@ -17,7 +17,14 @@ internal class MenuExibirDetalhes : Menu
             Console.WriteLine("\nDiscografia:");
             foreach(Album album in banda.Albuns)
             {
-                Console.WriteLine($"{album.Nome} -> {album.Media}");
+                Console.WriteLine($"\t{album.Nome} -> {album.Media}");
+                if (album.Musicas.Any())
+                {
+                    foreach(Musica musica in album.Musicas)
+                    {
+                        Console.WriteLine($"\t\t{musica.Nome} -> {musica.Media}");
+                    }
+                }
             }
             Console.WriteLine("\nDigite uma tecla para voltar ao menu principal");
             Console.ReadKey();
